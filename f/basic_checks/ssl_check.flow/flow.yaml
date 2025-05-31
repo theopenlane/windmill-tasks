@@ -7,8 +7,8 @@ value:
         type: script
         input_transforms:
           DOMAIN:
-            type: static
-            value: theopenlane.io
+            type: javascript
+            expr: '`${flow_input.Domain}`'
           PORT:
             type: static
             value: '443'
@@ -17,6 +17,15 @@ value:
 schema:
   $schema: 'https://json-schema.org/draft/2020-12/schema'
   type: object
-  order: []
-  properties: {}
-  required: []
+  order:
+    - Domain
+  properties:
+    Domain:
+      type: string
+      description: Domain To Check
+      default: ''
+      format: uri
+      nullable: false
+      placeholder: example.com
+  required:
+    - Domain
