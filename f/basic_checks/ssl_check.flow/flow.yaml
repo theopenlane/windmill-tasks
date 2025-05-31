@@ -13,7 +13,7 @@ value:
             type: static
             value: '443'
         is_trigger: false
-        path: u/sfunkhouser/check_for_ssl
+        path: f/basic_checks/check_for_ssl
 schema:
   $schema: 'https://json-schema.org/draft/2020-12/schema'
   type: object
