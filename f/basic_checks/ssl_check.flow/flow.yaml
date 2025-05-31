@@ -1,0 +1,22 @@
+summary: openlane ssl check
+description: ''
+value:
+  modules:
+    - id: a
+      value:
+        type: script
+        input_transforms:
+          DOMAIN:
+            type: static
+            value: theopenlane.io
+          PORT:
+            type: static
+            value: '443'
+        is_trigger: false
+        path: u/sfunkhouser/check_for_ssl
+schema:
+  $schema: 'https://json-schema.org/draft/2020-12/schema'
+  type: object
+  order: []
+  properties: {}
+  required: []
